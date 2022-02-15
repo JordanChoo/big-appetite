@@ -1,0 +1,15 @@
+{
+  "name": "big-appetite",
+  "version": "1.0.0",
+  "description": "Webhook data to BigQuery saver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Choo",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/bigquery": "^5.11.0",
+    "dotenv": "^16.0.0"
+  }
+}
