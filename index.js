@@ -17,7 +17,26 @@ const bigQuery = new BigQuery({
 module.exports = {
 
     bigAppetite: async(req, res) => {
-       
+        try {
+            if(req.query.kgKey != kgKey) return res.status(401).send('Not authorized');
+
+            var bqData = {
+                source: req.query.note || null,
+                body: JSON.stringify(req.body),
+                query: JSON.stringify(req.query),
+                raw: JSON.stringify()
+            }
+
+            await bigQuery
+                .dataset(bqDataset)
+                .table(bqTable)
+                .insert(bqData);
+            
+        } catch (e) {
+            console.log(e);
+            console.log(JSON.stringify(e));
+            res.status(500).send();
+        }
     }
 
 };
