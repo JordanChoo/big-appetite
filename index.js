@@ -23,7 +23,7 @@ module.exports = {
 
             var bqData = {
                 source: req.query.source || null,
-                date: Date.now(),
+                date: new Date().toISOString(),
                 body: JSON.stringify(req.body),
                 query: JSON.stringify(req.query),
             }
@@ -33,7 +33,7 @@ module.exports = {
                 .table(bqTable)
                 .insert(bqData);
             
-            console.log(`Saved to BigQuery: ${bqData}`);
+            console.log(`Saved to BigQuery: ${JSON.stringify(bqData)}`);
             res.status(200).send();
 
         } catch (e) {
