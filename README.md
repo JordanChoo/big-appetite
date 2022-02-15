@@ -1,4 +1,4 @@
-# Big Appetite 
+# Big Appetite 🍔🍇🍈🍉🍊🍋🍌🍍🥭
 The purpose of Big Appetite is simple, save raw HTTP requests to BigQuery. 
 
 ## Why
