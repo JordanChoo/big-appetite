@@ -24,7 +24,7 @@ module.exports = {
                 source: req.query.note || null,
                 body: JSON.stringify(req.body),
                 query: JSON.stringify(req.query),
-                raw: JSON.stringify()
+                raw: JSON.stringify(req)
             }
 
             await bigQuery
