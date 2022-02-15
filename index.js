@@ -23,8 +23,8 @@ module.exports = {
 
             var bqData = {
                 source: req.query.note || null,
-                body: JSON.stringify(req.body),
-                query: JSON.stringify(req.query),
+                body: req.body,
+                query: req.query,
                 raw: JSON.stringify(req)
             }
 
