@@ -5,6 +5,7 @@ const {BigQuery} = require('@google-cloud/bigquery');
 require('dotenv').config();
 const bqDataset = process.env.bqDataset || null;
 const bqTable = process.env.bqTable || null;
+const bqProjectId = process.env.bqProjectId || null;
 const kgKey = process.env.kgKey || null;
 const gServiceAccount = JSON.parse(process.env.gServiceAccount);
 
